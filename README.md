@@ -2,10 +2,12 @@
 
 ## Descripción del Método. 
 
-El método de relajación, más comunmente conocido como SOR por sus siglas es inglés, es una variante que se obtiene a partir de extrapolación del método de Gauss-Seidel[1]
+El método de relajación, más comunmente conocido como SOR por sus siglas es inglés, es una variante que se obtiene a partir de extrapolación del método de Gauss-Seidel[1], que una técnica para resolver sistemas de n ecuaciones lineales de la forma: 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=A\mathbf&space;x&space;=&space;\mathbf&space;b" target="_blank"><img src="https://latex.codecogs.com/gif.latex?A\mathbf&space;x&space;=&space;\mathbf&space;b" title="A\mathbf x = \mathbf b" /></a>
 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=a=3" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x = b" title="Eq1" /></a>
+
 
 
 
