@@ -2,7 +2,12 @@
 
 ## Descripción del Método. 
 
-El método de relajación, más comunmente conocido como SOR por sus siglas es inglés, es una variante que se obtiene a partir de extrapolación del método de Gauss-Seidel[1]: 
+El método de relajación, más comunmente conocido como SOR por sus siglas es inglés, es una variante que se obtiene a partir de extrapolación del método de Gauss-Seidel[1]
+
+
+:<math>A\mathbf x = \mathbf b</math>.
+
+
 
 
 En SOR, la extrapolación se hace mediante un promedio ponderado entre la solución en la iteración previa y iteración actual obtenida a partir de método de Gass-Seidel[2]. 
@@ -22,4 +27,4 @@ En SOR, la extrapolación se hace mediante un promedio ponderado entre la soluci
 
 [2]. http://mathworld.wolfram.com/SuccessiveOverrelaxationMethod.html
 
-[3].
+[3]. https://en.wikipedia.org/wiki/Successive_over-relaxation#Convergence
