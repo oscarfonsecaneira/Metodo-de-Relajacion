@@ -5,7 +5,7 @@
 El método de relajación, más comunmente conocido como SOR por sus siglas es inglés, es una variante que se obtiene a partir de extrapolación del método de Gauss-Seidel[1]
 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=a=3" target="_blank"><img src="https://latex.codecogs.com/gif.latex?<math>A\mathbf x = \mathbf b</math>" title="a=3" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=a=3" target="_blank"><img src="https://latex.codecogs.com/gif.latex?<math>A\mathbf x = \mathbf b</math>" title="<math>A\mathbf x = \mathbf b</math>" /></a>
 
 
 
