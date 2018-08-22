@@ -24,14 +24,14 @@ Entradas:
  x_o  := Suposición inicial de la solución. 
  
 ```
-Salidas: 
+Salida: 
 ```
 x := Vector de soluciones del sistema. 
 ```
 
 Fórmula de Recurrencia:
 
-
+<a href="https://www.codecogs.com/eqnedit.php?latex=x^{(k&plus;1)}_i&space;=&space;(1-\omega)x^{(k)}_i&space;&plus;&space;\frac{\omega}{a_{ii}}&space;\left(b_i&space;-&space;\sum_{j<i}&space;a_{ij}x^{(k&plus;1)}_j&space;-&space;\sum_{j>i}&space;a_{ij}x^{(k)}_j&space;\right),\quad&space;i=1,2,\ldots,n." target="_blank"><img src="https://latex.codecogs.com/gif.latex?x^{(k&plus;1)}_i&space;=&space;(1-\omega)x^{(k)}_i&space;&plus;&space;\frac{\omega}{a_{ii}}&space;\left(b_i&space;-&space;\sum_{j<i}&space;a_{ij}x^{(k&plus;1)}_j&space;-&space;\sum_{j>i}&space;a_{ij}x^{(k)}_j&space;\right),\quad&space;i=1,2,\ldots,n." title="x^{(k+1)}_i = (1-\omega)x^{(k)}_i + \frac{\omega}{a_{ii}} \left(b_i - \sum_{j<i} a_{ij}x^{(k+1)}_j - \sum_{j>i} a_{ij}x^{(k)}_j \right),\quad i=1,2,\ldots,n." /></a>
 
 ## Deducción de la fórmula. 
 
@@ -44,6 +44,42 @@ Fórmula de Recurrencia:
 
 ## Implementación. 
 
+El siguiente es un algoritmo en Python que dado un sistema de ecuaciones lineales y el parámetro de relajación, permite seleccionar gráficamente una primera aproximación de la solución del sistema de ecuaciones y soluciona el sistema. 
+```
+import numpy as np
+
+ITERATION_LIMIT = 1000
+
+# initialize the matrix
+A = np.array([[10., -1., 2., 0.],
+              [-1., 11., -1., 3.],
+              [2., -1., 10., -1.],
+              [0., 3., -1., 8.]])
+# initialize the RHS vector
+b = np.array([6., 25., -11., 15.])
+
+print("System of equations:")
+for i in range(A.shape[0]):
+    row = ["{0:3g}*x{1}".format(A[i, j], j + 1) for j in range(A.shape[1])]
+    print("[{0}] = [{1:3g}]".format(" + ".join(row), b[i]))
+
+x = np.zeros_like(b)
+for it_count in range(1, ITERATION_LIMIT):
+    x_new = np.zeros_like(x)
+    print("Iteration {0}: {1}".format(it_count, x))
+    for i in range(A.shape[0]):
+        s1 = np.dot(A[i, :i], x_new[:i])
+        s2 = np.dot(A[i, i + 1:], x[i + 1:])
+        x_new[i] = (b[i] - s1 - s2) / A[i, i]
+    if np.allclose(x, x_new, rtol=1e-8):
+        break
+    x = x_new
+
+print("Solution: {0}".format(x))
+error = np.dot(A, x) - b
+print("Error: {0}".format(error))
+
+```
 
 ## Bibliografía. 
 
