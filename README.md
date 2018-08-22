@@ -8,6 +8,8 @@ El método de relajación, más comunmente conocido como SOR por sus siglas es i
 
 Donde: 
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=\mathbf{x}^{(k)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathbf{x}^{(k)}" title="\mathbf{x}^{(k)}" /></a> es la k-ésima 
+
 
 
 
