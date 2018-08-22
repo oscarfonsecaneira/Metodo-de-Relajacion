@@ -35,6 +35,20 @@ Fórmula de Recurrencia:
 
 ## Deducción de la fórmula. 
 
+Al considerar el sistema inicial: a href="https://www.codecogs.com/eqnedit.php?latex=A\mathbf&space;x&space;=&space;\mathbf&space;b" target="_blank"><img src="https://latex.codecogs.com/gif.latex?A\mathbf&space;x&space;=&space;\mathbf&space;b" title="A\mathbf x = \mathbf b" /></a>
+
+Donde: 
+<a href="https://www.codecogs.com/eqnedit.php?latex=A=\begin{bmatrix}&space;a_{11}&space;&&space;a_{12}&space;&&space;\cdots&space;&&space;a_{1n}&space;\\&space;a_{21}&space;&&space;a_{22}&space;&&space;\cdots&space;&&space;a_{2n}&space;\\&space;\vdots&space;&&space;\vdots&space;&&space;\ddots&space;&&space;\vdots&space;\\a_{n1}&space;&&space;a_{n2}&space;&&space;\cdots&space;&&space;a_{nn}&space;\end{bmatrix},&space;\qquad&space;\mathbf{x}&space;=&space;\begin{bmatrix}&space;x_{1}&space;\\&space;x_2&space;\\&space;\vdots&space;\\&space;x_n&space;\end{bmatrix}&space;,&space;\qquad&space;\mathbf{b}&space;=&space;\begin{bmatrix}&space;b_{1}&space;\\&space;b_2&space;\\&space;\vdots&space;\\&space;b_n&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?A=\begin{bmatrix}&space;a_{11}&space;&&space;a_{12}&space;&&space;\cdots&space;&&space;a_{1n}&space;\\&space;a_{21}&space;&&space;a_{22}&space;&&space;\cdots&space;&&space;a_{2n}&space;\\&space;\vdots&space;&&space;\vdots&space;&&space;\ddots&space;&&space;\vdots&space;\\a_{n1}&space;&&space;a_{n2}&space;&&space;\cdots&space;&&space;a_{nn}&space;\end{bmatrix},&space;\qquad&space;\mathbf{x}&space;=&space;\begin{bmatrix}&space;x_{1}&space;\\&space;x_2&space;\\&space;\vdots&space;\\&space;x_n&space;\end{bmatrix}&space;,&space;\qquad&space;\mathbf{b}&space;=&space;\begin{bmatrix}&space;b_{1}&space;\\&space;b_2&space;\\&space;\vdots&space;\\&space;b_n&space;\end{bmatrix}" title="A=\begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\a_{n1} & a_{n2} & \cdots & a_{nn} \end{bmatrix}, \qquad \mathbf{x} = \begin{bmatrix} x_{1} \\ x_2 \\ \vdots \\ x_n \end{bmatrix} , \qquad \mathbf{b} = \begin{bmatrix} b_{1} \\ b_2 \\ \vdots \\ b_n \end{bmatrix}" /></a>
+
+Siempre es posible descomponer la matriz asociada al sistema de la siguiente manera: <a href="https://www.codecogs.com/eqnedit.php?latex=A=D&plus;L&plus;U" target="_blank"><img src="https://latex.codecogs.com/gif.latex?A=D&plus;L&plus;U" title="A=D+L+U" /></a>, tal que <a href="https://www.codecogs.com/eqnedit.php?latex=D" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D" title="D" /></a> es una matriz diagonal, <a href="https://www.codecogs.com/eqnedit.php?latex=U" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D" title="U" /></a> es una matriz triangular superior y <a href="https://www.codecogs.com/eqnedit.php?latex=D" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L" title="L" /></a> es una matriz triangula inferior  
+
+
+Luego, el sistema puede reescribirse así: 
+
+Finalmente, aprovechando que las matrices cuentan con la estructura antes mencionada, el producto de matrices se puede escribir fácilmente en términos de sus elementos: 
+
+
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=\mathbf{x}^{(k)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathbf{x}^{(k)}" title="\mathbf{x}^{(k)}" /></a> es la k-ésima iteración o aproximación de  es la siguiente iteración y la matriz  se descompone en una matriz triangular superior y en una matriz que es la suma de una matriz triangular inferior y una matriz diagonal. 
 
 
@@ -80,6 +94,13 @@ error = np.dot(A, x) - b
 print("Error: {0}".format(error))
 
 ```
+
+Tiene como salidas: 
+
+```
+hghghghg 
+```
+
 
 ## Bibliografía. 
 
